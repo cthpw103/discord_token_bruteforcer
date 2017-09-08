@@ -1,9 +1,9 @@
 //yeah ok
 const discord = require("discordie"); //i use discordie b'cuz lazy
-var user = new Discordie(); //user object
+var user = new discord(); //user object
 var start = ["Mj", "its_a_bot"];
 var length = [59, 64, 57]; //some tokens are 59 chars longs and some are 64 chars long, mainly 59 though.
-function do(token, name) { 
+function lol(token, name) { 
     try{
     user.connect({
         token: token
@@ -35,7 +35,7 @@ function gener8(name) {
               token += possible.charAt(Math.floor(Math.random() * possible.length));
         //if user:
         //do(start[1] + token, name)
-        do(token, name);
+        lol(token, name);
     } catch (err) {
         console.log("lol error");
     }
