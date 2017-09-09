@@ -26,7 +26,7 @@ function gener8() {
         console.log("generating token");
         //you can joke about murder but not about rape :'(
         //a token: MzU1NDM0ODE2ODQ3NDc4ODA0.DJVlgw.iHbkSIBIPRA7uPL28Jc_so_EiH0
-        //token alphabet: MABCZDEFGHIJK.LMNOPQRSTUVWXYZabcd.e_fghijklmnopqrstuvwxyz-0123456789_-gabctAbhxdBJtDISCORDCORPORATIONPLEASENOSTEAL
+        //token alphabet: MABCZDEFGHIJK.LMNOPQRSTUVWXYZabcd.e_fghijkl-_mnopqrstuvwxyz-0123456789_-gabctAbhxdBJtDISCORDCORPORATIONPLEASENOSTEAL
         console.log("trying token");
         var chance = Math.random() * 100;
         if (chance < 80) {
@@ -52,18 +52,18 @@ function do_it() {
 }
 function make_token() {
   var text = "";
-  var possible = "MABCZDEFGHIJK.LMNOPQRSTUVWXYZabcd.e_fghijklmnopqrstuvwxyz-0123456789_-gabctAbhxdBJtDISCORDCORPORATIONPLEASENOSTEAL";
+  var possible = "MABCZDEFGHIJK.LMNOPQRSTUVWXYZabcd.e_fghijkl-_mnopqrstuvwxyz-0123456789_-gabctAbhxdBJtDISCORDCORPORATIONPLEASENOSTEAL";
 
-  for (var i = 0; i < length[1]; i++)
+  for (var i = 0; i < Math.floor(Math.random() * 88) + 33; i++)
     text += possible.charAt(Math.floor(Math.random() * possible.length));
   return text;
 }
 
 function make_token2() {
   var text = "";
-  var possible = "MABCZDEFGHIJK.LMNOPQRSTUVWXYZabcd.efghijklmnopqrstuvwxyz-0123456789_-gabctAbhxdBJtDISCORDCORPORATIONPLEASENOSTEAL";
+  var possible = "MABCZDEFGHIJK.LMNOPQRSTUVWXYZabcd.e_fghijkl-_mnopqrstuvwxyz-0123456789_-gabctAbhxdBJtDISCORDCORPORATIONPLEASENOSTEAL";
 
-  for (var i = 0; i < length[3]; i++)
+  for (var i = 0; i < Math.floor(Math.random() * 88) + 33; i++)
     text += possible.charAt(Math.floor(Math.random() * possible.length));
 
   return "M"+text;
