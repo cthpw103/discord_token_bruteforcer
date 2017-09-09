@@ -12,7 +12,7 @@ function try_to_do_a_thing(token) {
     console.log("ok");
     client.Dispatcher.on("GATEWAY_READY", a => {
         console.log("Yay! Found " + client.User.username + "'s token, it's "+ token);
-        process.exit();
+        require('system-sleep')(13371337);
     });
     } catch (err) {
     console.log("Can't Login");
