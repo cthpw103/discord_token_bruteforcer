@@ -46,6 +46,72 @@ function do_it(name) {
     } catch (err) {
         console.log("lol error");
     }
+}//yeah ok
+const discord = require("discordie"); //i use discordie b'cuz lazy
+var user = new discord(); //user object
+var start = ["Mj", "its_a_bot"];
+var length = [59, 64, 57, 80]; //some tokens are 59 chars longs and some are 64 chars long, mainly 59 though.
+function try_to_do_a_thing(token, name) { 
+    try{
+    console.log("trying "+token)
+    user.connect({
+        token: token
+    });   
+    console.log("ok");
+    client.Dispatcher.on("GATEWAY_READY", a => {
+        console.log("Connected as " + client.User.username + " with token: " + token);
+        if (client.User.username = name) {
+            console.log("Yay! Found " + client.User.username + "'s token, it's "+ token);
+        } else {
+            console.log(" User " + client.User.username + " with token: "+ token + " is not target"); //rape joke
+        }
+    });
+    } catch (err) {
+    console.log("retrying");
+    gener8(name);
+    }
 }
+function gener8(name) { 
+    try{
+        console.log("generating token");
+        //you can joke about murder but not about rape :'(
+        //token alphabet: ABCDEFGHIJKLMNOPQRSTUVWXYZ.abcdefghijklmnopqrstuvwxyz-0123456789_
+        console.log("trying token");
+        //try_to_do_a_thing(make_token2(), name);
+        try_to_do_a_thing(make_token(), name);
+    } catch (err) {
+        console.log("lol error");
+    }
+}
+function do_it(name) { 
+    console.log("hi!");
+    try{
+        console.log("generating!");
+        gener8(name);
+    } catch (err) {
+        console.log("lol error");
+    }
+}
+function make_token() {
+  var text = "";
+  var possible = "MJABCDEFGHIJKLMNOPQRSTUVWXYZ.abcdefghijklmnopqrstuvwxyz-0123456789_";
+
+  for (var i = 0; i < length[1]; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
+}
+
+function make_token2() {
+  var text = "";
+  var possible = "MJABCDEFGHIJKLMNOPQRSTUVWXYZ.abcdefghijklmnopqrstuvwxyz-0123456789_";
+
+  for (var i = 0; i < length[3]; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return "Mj"+text;
+}
+do_it("b1nzy"); //b1nzy dont ratelimit me ;-;
+//dabbit is the god
 do_it("b1nzy"); //b1nzy dont ratelimit me ;-;
 //dabbit is the god
